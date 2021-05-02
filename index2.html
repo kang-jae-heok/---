@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>강재혁의 이력서</title>
+  <link rel="stylesheet" href="style2.css">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+       
+        google.load('visualization', '1.0', {
+            'packages': ['corechart']
+        });
+        google.setOnLoadCallback(drawChart);
+
+       
+        function drawChart() {
+            
+            var data = new google.visualization.DataTable();
+
+              
+            data.addColumn('string', '인물');
+            data.addColumn('number', '취득표');
+
+          
+            data.addRows([
+                ['JAVA', 150],
+                ['C#', 34],
+                ['JS', 20]
+            ]);
+
+               
+            var opt = {
+                'title': 'laungauage',
+                'width': 600,
+                'height': 400,
+                pieSliceText: 'percentage', 
+                legend: {
+                    position: 'right',
+                    textStyle: {
+                        color: 'blue',
+                        fontSize: 25
+                    }
+                } 
+            };
+        
+            var chart = new google.visualization.PieChart(
+                document.getElementById('chart_div'));
+            chart.draw(data, opt);
+        }
+
+    </script>
+</head>
+<body>
+  <div class="mainbox">
+    <div class="title-box">
+      <div class="profile-img">
+        <img src="img/KakaoTalk_20210430_153956454.jpg" alt="profile" width="80spx" height="90px"/>
+      </div>
+      <h1>강재혁</h1>
+      <p class="name-text">미래 앱 개발자</p>
+      </div>
+    <section class="left">
+      <h2>About ME</h2>
+      <p class="about-me-text">나이: 23(1999년 10월21일)<br> 거주지: 안산<br>직업: 대학생(대림대학교<br>평소 개발하는 것을 좋아하며 특히 언어중에는 자바를 가장 좋아하며 <br>실용 가능한 앱을 만들어 수익을 창출하는게 꿈입니다 </p>
+      <div class="pie-chart1" id="pieChart"></div>
+    </section>
+    <section class="left">
+      <h2>Skill</h2>
+      <div id="chart_div"></div>
+    </section>
+ 
+    
+    <section>
+      <h2>Projects</h2>
+      <div class="float-wrap">
+        <p class="title-text">반찬 및 식재료 중고거래 모바일 앱(푸딩 Fooding)</p>
+        <p class="year-text">2021</p>
+      </div>
+      <p class="desc-text">Back-End app Developer, Data-base </p>
+      <p class="desc-subtext">Node.js,MySQL,mongoDB</p>
+        <!--  -->
+      <div class="float-wrap">
+        <p class="title-text">나만의 게임 만들기</p>
+        <p class="year-text">2022</p>
+      </div>
+      <p class="desc-text">Game program Developer</p>
+      <p class="desc-subtext">Unity,C#</p>
+    </section>
+    <!--  -->
+    <section>
+      <h2>Activites</h2>
+      <div class="float-wrap">
+        <p class="title-text">한이음 멘토링</p>
+        <p class="year-text">2021</p>
+      </div>
+      <p class="desc-text">Back-End app Developer, Data-base</p>
+      <p class="desc-subtext">Node.js,MySQL,mongoDB</p>
+        <!--  -->
+      <div class="float-wrap">
+        <p class="title-text">동아리 공모전</p>
+        <p class="year-text">2021</p>
+      </div>
+      <p class="desc-text">Back-End Web Developer</p>
+      <p class="desc-subtext">JAVA</p>
+    </section>
+    <div class="sns-wrap">
+
+      <a href="https://www.facebook.com/"><img class="sns-img" src="img/facebook.png"></a>
+      <a href="https://www.instagram.com/"><img class="sns-img" src="img/insta.png"></a>
+      <img class="sns-img" src="img/linked-in.png">
+      <a href="https://twitter.com/"><img class="sns-img" src="img/twitter.png"></a>
+    </div>
+  
+
+  <footer>
+   <p>Copyright Daelim all rights reserved</p> 
+  </footer>
+</body>
+</html>
